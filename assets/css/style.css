@@ -1,0 +1,33 @@
+html, body {
+  background-image: url(../images/TWD.gif);
+  background-position: center;
+  background-size: cover;
+  background-color: snow !important;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: auto 0;
+  color: red !important;
+  text-align: center !important;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+.jumbotron {
+  font-family: 'Gloria Hallelujah', cursive;
+  text-align: center;
+  font-size: 50px !important;
+  background-color: black !important; 
+   -webkit-animation: example 10s infinite;
+    animation: example 10s infinite;
+
+@-webkit-keyframes example {
+    from {background-color: rgb(230, 230, 250);}
+    to {background-color: #0b1b35; }
+}
+@-moz-keyframes example {
+    from {background-color: rgb(230, 230, 250);}
+    to {background-color: #067cde;}
+}
+@-o-keyframes example {
+    from {background-color: rgb(230, 230, 250);}
+    to {background-color: #067cde;}
+}    

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Trivia Game</title>
+
+        <!-- Viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- jQuery CDN -->
+        <script   src="https://code.jquery.com/jquery-3.1.0.js"   
+        integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- Font Awesome -->
+        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+    </head>
+    <body>
+    
+        <!-- Navbar Start-->
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jumbotron">The Walking Dead Trivia Game</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End-->
+
+            <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <button id = "start">Start</button>
+                        <div id = "testDiv">
+                        <div id="questionDisplay">
+                            <div id="show-number">15</div>
+                        </div>
+                        <div class="container-questions"> 
+            
+                            <!-- INPUT -->
+                            <div class = "checkbox">
+                                <label for = "firstQ" id ="firstQ"><input type="radio" id="v1" name="q" value="1"></label>
+                            </div>
+                            <br>
+                            <div class = "checkbox">
+                                <label for='secondQ' id="secondQ"><input type="radio" id="v2" name="    background-image: url("../images/twdone.gif")!important;
+                                background-size: cover !important;" value="2"></label>
+                            </div>
+                            <br>
+                            <div class = "checkbox">
+                                <label for='thirdQ' id="thirdQ"><input type="radio" id="v3" name="q" value="3"></label>
+                            </div>
+                            <br>
+                            <!-- INPUT END -->
+
+                            <button id="next" type="button">Next</button>
+                            </div> 
+                            <!-- container -->
+                            </div>  
+                            <!-- test div -->
+                            <div id = 'finalAnswer'></div>
+                            <div id="bm">
+                                <img id="bm" src="assets/images/twdone.gif">
+                            </div>
+                    </div> 
+                    <!-- panel-body -->
+                </div> 
+                <!-- panel-default -->
+            </div>  
+            <!-- col -->
+        </div> 
+        <!-- row -->
+
+        <!-- SCOREBOARD -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        Scoreboard:
+                        <h3> <span class="roundCounter"></span></h3>
+                        <h3> <span class="winCounter"></span></h3>
+                        <h3> <span class="lossCounter"></span></h3>
+                    </div>  
+                    <!-- panel-body -->
+                </div>  
+                <!-- panel-default -->
+            </div>  
+            <!-- col -->
+        </div> 
+        <!-- row -->
+        
+        
+        <!--JQuery-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <!--Javascript-->
+        <script type = "text/javascript" src="./assets/javascript/app.js"></script>   
+    </body>
+</html>
