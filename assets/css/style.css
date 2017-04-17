@@ -2,7 +2,7 @@ html, body {
   background-image: url(../images/TWD.gif);
   background-position: center;
   background-size: cover;
-  background-color: snow !important;
+  background-color:#000; opacity:0.8; !important;
   width: 100%;
   height: 100%;
   padding: 0px;
@@ -10,11 +10,12 @@ html, body {
   color: red !important;
   text-align: center !important;
   font-family: 'Gloria Hallelujah', cursive;
+
 }
 .jumbotron {
   font-family: 'Gloria Hallelujah', cursive;
   text-align: center;
-  font-size: 50px !important;
+  font-size: 60px !important;
   background-color: black !important; 
    -webkit-animation: example 10s infinite;
     animation: example 10s infinite;
@@ -30,4 +31,53 @@ html, body {
 @-o-keyframes example {
     from {background-color: rgb(230, 230, 250);}
     to {background-color: #067cde;}
-}    
+} 
+
+* {
+    position: relative;
+    box-sizing: border-box;
+}
+
+h1 {
+  font-size: 80px !important;
+}
+
+button {
+  background-color: red !important;
+
+}
+
+#v1, #v2, #v3 {
+  margin-bottom: 10px;
+}
+
+.panel-default {
+  border: 4px solid black;
+}
+
+/*.panel-heading {
+  background-image: url("../images/logo.gif")!important;
+  background-size: cover;
+  height: 100%;
+}*/
+
+.container {
+    background-size: cover !important;
+    width: 100%;
+    height: 600px;
+    max-width: 600px;
+    margin: 5% 3% 3% 25%;
+    text-align: center;
+    border: 4px solid black;
+    padding-top: 5%;
+    border-radius: 5px;
+}
+
+#show-number {
+  height: 60px;
+  font-size: 50px;
+}
+
+#questionDisplay {
+  font-size: 50px;
+}

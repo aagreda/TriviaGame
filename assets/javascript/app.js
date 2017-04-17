@@ -149,7 +149,7 @@ $(document).ready(function(){
 
 
     var stopwatch = {
-          number: 15,
+          number: 20,
           run: function() {
             count = setInterval(stopwatch.decrement, 1000);
           },
