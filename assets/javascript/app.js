@@ -3,33 +3,37 @@ $(document).ready(function(){
 
     //Create global variable for game that lists questions objects
     var questions = [{
-                    question: "\"\"",
-                    choices: ["", "", ""],
+                    question: "\"I don't want to be afraid of being alive. Who said it?\"",
+                    choices: ["Maggie", "Carl", "Beth", "Carol"],
+                    answer: 1
+                    },{
+                    question: "\"Whats the name of the community Noah's family lived in?\"",
+                    choices: ["Shirewilt Estate", "Society Estates", "Wiltshire Estates", "Terminus"],
+                    answer: 4
+                    },{
+                    question: "\"What two characters from the TWD Tv Show do not appear in the Comic books?\"",
+                    choices: ["Deanna & Aaron", "Glenn & Maggie ", "Daryl & Merie", "Tyreese & Sasha"],
+                    answer: 3
+                    },{
+                    question: "\"The Governor is the leader of which town?\"",
+                    choices: ["Macon", "Atlanta", "Savanna", "Woodbury"],
+                    answer: 4
+                    },{
+                    question: "\"Michonne saves whose life at the end of the Season 2?\"",
+                    choices: ["Andrea", "Daryl", "Lori", "Carl"],
+                    answer: 1
+                    },{
+                    question: "\"Who kills Beth?\"",
+                    choices: ["Daryl", "Carol", "Maggie", "Dawn"],
+                    answer: 4
+                    },{
+                    question: "\"Who does Rick first meet?\"",
+                    choices: ["Margon", "Daryl", "Glenn", "Shane"],
+                    answer: 3
+                    },{
+                    question: "\"Who killed Hershel?\"",
+                    choices: ["Carl", "The Governor", "Michonne", "Carol"],
                     answer: 2
-                    },{
-                    question: "\"\"",
-                    choices: ["", "", ""],
-                    answer: 1
-                    },{
-                    question: "\"\' \"",
-                    choices: ["", "", ""],
-                    answer: 1
-                    },{
-                    question: "\"\"",
-                    choices: ["", "", ""],
-                    answer: 2
-                    },{
-                    question: "\“\”",
-                    choices: [""],
-                    answer: 1
-                    },{
-                    question: "\"\"",
-                    choices: [""],
-                    answer: 1
-                    },{
-                    question: "\"\"",
-                    choices: [""],
-                    answer: 1
                     }];
 
 
@@ -80,6 +84,15 @@ $(document).ready(function(){
         return newDiv;
     };
 
+    //Create a function to display the 4th Questions & Answer. Then .appnend() 
+    function displayFourth(index){
+        var newDiv = $('<div id=answer4>');
+        var answer4 = $('<p>');
+        answer4.text(questions[index].choices[3]);
+        newDiv.append(answer4);
+        return newDiv;
+    };
+
     //Create a function thats takes you to the next Question
     function nextQuestion(){
 
@@ -88,6 +101,7 @@ $(document).ready(function(){
             $('#answer1').remove();
             $('#answer2').remove();
             $('#answer3').remove();
+            $('#answer4').remove();
 
 
             var next = displayQuestion(counter);
@@ -101,6 +115,9 @@ $(document).ready(function(){
 
             var thirdQ = displayThird(counter);
             $('#thirdQ').append(thirdQ);
+            
+            var fourthQ = displayFourth(counter);
+            $('#fourthQ').append(fourthQ);
             } else {
             $('#testDiv').hide();
             $('#start').hide();
@@ -120,8 +137,7 @@ $(document).ready(function(){
                 round++;
                 $(".roundCounter").html("Round: " + round);
                 break;
-                } //2nd if
-            
+                } 
 
              else if (answer[i].value !== questions[counter].answer){
                 wrong++;
@@ -147,9 +163,10 @@ $(document).ready(function(){
         nextQuestion();
     });
 
-
+    // Creat a gloval variable for the stopwatch/timer. 
     var stopwatch = {
           number: 20,
+          //Create a cunt function using setInterval(.decrement, 1000)
           run: function() {
             count = setInterval(stopwatch.decrement, 1000);
           },
@@ -165,9 +182,12 @@ $(document).ready(function(){
                     stopwatch.run();
                 }   
           },
+        //Create a reset counter function 
         resetCounter: function(){
-                stopwatch.number = 16;
+                stopwatch.number = 15;
           },
+
+        //Create a clear interval function  
         clear: function(){
                 clearInterval(count);
           }
